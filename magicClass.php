@@ -60,15 +60,8 @@ class MagicClass {
 
     public function __isset($name)
     {
-        //nenaudojant var_dump suzinoti ar kintamasis nustatytas
-        if (isset($this->data[$name]))
-        {
-            echo $name." is set.<br>".PHP_EOL;
-        }
-        else
-        {
-            echo $name." is not set.<br>".PHP_EOL;
-        }
+        echo "checking if ".$name." is set.".PHP_EOL;
+        return isset($this->data[$name]);
     }
 
     public function __unset($name)
